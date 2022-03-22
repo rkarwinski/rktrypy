@@ -30,7 +30,7 @@ class Trip(BaseModel):
 def read_root():
     return False
 
-@app.get("/trip")
+@app.post("/trip")
 def read_item(trip: Trip):
     return calculate_trip(trip)
 
